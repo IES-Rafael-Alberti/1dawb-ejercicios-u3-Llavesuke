@@ -1,5 +1,5 @@
 
-from listas_01 import ask_subject
+from src.listas_01 import ask_subject
 
 def loop_subjects(subjects):
     """Print each subject on the list

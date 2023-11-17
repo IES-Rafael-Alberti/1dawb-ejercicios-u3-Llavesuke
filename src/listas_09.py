@@ -1,6 +1,6 @@
 from listas_08 import ask_word
 
-def count_vowels(word):
+def count_vowels(word:str) -> list:
     """Count vowels in a word.
 
     Args: 
@@ -21,14 +21,14 @@ def main():
 
     word = ask_word()
 
-    lista = count_vowels(word)
+    vowels_list = count_vowels(word)
     bool = True
     
     print('----------------------------')
-    for i in range(len(lista)):
+    for i in range(len(vowels_list)):
         while bool:
             for vocal in 'aeiou':
-                print(f'En la palabra {word}, hay {lista[i]} {vocal}')
+                print(f'En la palabra {word}, hay {vowels_list[i]} {vocal}')
                 bool = False
                 i +=1
     print('----------------------------')

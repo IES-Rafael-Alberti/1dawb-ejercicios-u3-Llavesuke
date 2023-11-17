@@ -8,7 +8,7 @@ def check_approved(subjects,marks):
         subjects (list[str]): A list with the subjects written by the user.
         marks (list Union[float,int]) : A list with integers and floats values.
     """
-    for i in range(len(subjects)):
+    for i in range(len(subjects) -1, -1, -1):
         if marks[i] < 5:
             subjects.pop(i)
     

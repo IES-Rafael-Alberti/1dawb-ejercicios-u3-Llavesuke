@@ -1,12 +1,26 @@
 
-def display_matrix(A):
+def display_matrix(A:list):
+    """Show the matrix
+
+    Args:
+        A (list[int]): A list composed of lists
+    """    
     print('Matriz: ')
     for row in A:
         print(row)
 
     print('\n')
 
-def matrix_products(A,B):
+def matrix_products(A:list,B:list):
+    """A product between two matrix 
+
+    Args: 
+        A (list[int]): A list composed of lists
+        B (list[int]): A list composed of lists
+
+    Returns:
+        C (list[int]) A list that is the product between the matrix A and B.
+    """
     rows_A = len(A)
     columns_A = len(A[0])
     

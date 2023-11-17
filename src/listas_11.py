@@ -1,5 +1,5 @@
 
-def scalar_product(u_vector,v_vector):
+def scalar_product(u_vector:list[int],v_vector:list[int]) -> tuple:
     """Make scalar product between 2 vectors
 
     Args:
@@ -10,7 +10,7 @@ def scalar_product(u_vector,v_vector):
         result (list[int]): A new list with the scalar product between the two vectors.
     """
     
-    result = [u_vector[0]*v_vector[0],u_vector[1]*v_vector[1],u_vector[2]*v_vector[2]]
+    result = tuple(u_vector[i]*v_vector[i] for i in range(len(u_vector)))
 
     return result
 

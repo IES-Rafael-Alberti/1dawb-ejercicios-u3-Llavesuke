@@ -1,6 +1,6 @@
 from listas_06 import clean_terminal
 
-def check_3(letters):
+def check_3(letters:list[str]):
     """Check each letter and if its position its a 3 multiple, delete it.
 
     Args:
@@ -8,17 +8,9 @@ def check_3(letters):
     Results:
         removed_letters (list[str]): A list with the comprobation already did.
     """
-    print(len(letters))
-
-
     for i in range(len(letters),-1,-1):
         if  i%3 == 0:
             del(letters[i])
-    """
-    for i in range(len(letters,-1,-1))
-        if  i%3 == 0:
-            del(letters[i])
-    """
     
     return letters
 

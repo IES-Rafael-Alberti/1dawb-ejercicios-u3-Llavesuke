@@ -1,5 +1,8 @@
 
 def ask_user():
+    """Ask the user for a serie of integers followed by comma.
+
+    """
     bool =False
     
     while not bool:
@@ -20,9 +23,6 @@ def ask_user():
             numeric_list = str_list
             
             return numeric_list
-        
-        except TypeError:
-            print('No has puesto bien las comas.')
 
         except ValueError:
             print('Todos los valores deben ser númericos')
@@ -37,28 +37,36 @@ def calculate_average(numeric_list):
 
     return average
 
-def calculate_typical_deviation(numeric_list,average):
+def calculate_typical_deviation(numeric_list:list) -> int:
+    """Calculate the typical deviation of a list with integers
+
+    Args:
+        numeric_list (list[int]): A list with integers introduced by the user.
+    Returns:
+        typical_deviation (int): The typical deviation from the previous integers.
+    """
     values = len(numeric_list)
+    
+    class_average = sum(numeric_list) / values
+
     arithmetic_sum = 0
 
-    class_average = (numeric_list[0]+numeric_list[len(numeric_list)])/2
-
-    for number in  numeric_list:
-        arithmetic_sum += (number-class_average)
-
-    typical_deviation = ((arithmetic_sum**2)/values)**1/2
+    for number in numeric_list:
+        arithmetic_sum += (number - class_average) ** 2
+        
+    typical_deviation = (arithmetic_sum / values) ** 0.5
 
     return typical_deviation
-
+    
 def main():
     numeric_list = ask_user()
 
-    average = calculate_average(numeric_list)
+    average = round(calculate_average(numeric_list),2)
 
-    typical_deviation = calculate_typical_deviation(numeric_list,average)
+    typical_deviation = round(calculate_typical_deviation(numeric_list),2)
 
     print('Desviación típica: ', end= '')
-    print-(typical_deviation)
+    print(typical_deviation)
 
     print('Media: ', end='')
     print(average)

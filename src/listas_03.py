@@ -1,17 +1,17 @@
 import os
-from listas_02 import ask_subject
+from src.listas_02 import ask_subject
 
-def ask_marks(subjects):
+def ask_marks(subjects:list[str]) -> list[int]:
     """Ask the marks from the previous subjects
 
     Ask the marks from the subjects written by the user and ends when
     the numbers of the grades its the same as the name of subjects.
 
     Args:
-        Subjects (list[str]): A list of subjects written by the user.
+        subjects (list[str]): A list of subjects written by the user.
 
     Returns:
-        marks (list[str]): A list with the marks of each subject.
+        marks (list[int]): A list with the marks of each subject.
 
     Raises:
         ValueError: If the input is a integer or a float.
