@@ -1,4 +1,4 @@
-from listas_08 import ask_word
+from src.listas_08 import ask_word
 
 def count_vowels(word:str) -> list:
     """Count vowels in a word.
@@ -21,7 +21,7 @@ def main():
 
     word = ask_word()
 
-    vowels_list = count_vowels(word)
+    vowels_list = count_vowels(word) # type: ignore
     bool = True
     
     print('----------------------------')

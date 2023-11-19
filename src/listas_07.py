@@ -1,4 +1,4 @@
-from listas_06 import clean_terminal
+from src.listas_06 import clean_terminal
 
 def check_3(letters:list[str]):
     """Check each letter and if its position its a 3 multiple, delete it.

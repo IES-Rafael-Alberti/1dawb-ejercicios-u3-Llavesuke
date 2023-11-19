@@ -1,5 +1,5 @@
 import os
-from src.listas_02 import ask_subject
+from src.listas_01 import ask_subject
 
 def ask_marks(subjects:list[str]) -> list[int]:
     """Ask the marks from the previous subjects
@@ -56,7 +56,7 @@ def main():
     clean_terminal()
 
     print(f'\n{subjects}\n')
-    marks = ask_marks(subjects)
+    marks = ask_marks(subjects) # type: ignore
 
     loops(subjects,marks)
 

@@ -18,7 +18,7 @@ def ask_user():
                 int(str_list[i])
 
             for i in range(len(str_list)):
-                str_list[i] = int(str_list[i])
+                str_list[i] = int(str_list[i]) # type: ignore
 
             numeric_list = str_list
             
@@ -63,7 +63,7 @@ def main():
 
     average = round(calculate_average(numeric_list),2)
 
-    typical_deviation = round(calculate_typical_deviation(numeric_list),2)
+    typical_deviation = round(calculate_typical_deviation(numeric_list),2) # type: ignore
 
     print('Desviación típica: ', end= '')
     print(typical_deviation)

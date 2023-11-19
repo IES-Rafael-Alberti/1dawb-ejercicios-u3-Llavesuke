@@ -1,4 +1,4 @@
-from listas_03 import clean_terminal
+from src.listas_03 import clean_terminal
 
 def ask_numbers():
     """Ask the winner numbers to the user
@@ -8,6 +8,7 @@ def ask_numbers():
 
     Raises:
         ValueError: If the number introduced by the user is not a number between 1 and 49.
+        TypeError: If new_number is already on the list
     """
     lottery_numbers = []
 
@@ -38,6 +39,9 @@ def ask_refund():
 
     Returns:
         refund (int): The refund value.
+    
+    Raises:
+        ValueError: If the refund number is not between 1 or 10.
     """
     bool = False
     while not bool:

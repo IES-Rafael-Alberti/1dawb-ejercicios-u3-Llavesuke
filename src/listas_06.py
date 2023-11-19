@@ -1,5 +1,5 @@
-from listas_02 import ask_subject
-from listas_03 import ask_marks, clean_terminal
+from src.listas_02 import ask_subject
+from src.listas_03 import ask_marks, clean_terminal
 
 def check_approved(subjects,marks):
     """Check each subject with its corresponding mark.
@@ -21,13 +21,13 @@ def main():
     clean_terminal()
 
     print(f'\n{subjects}\n')
-    marks = ask_marks(subjects)
+    marks = ask_marks(subjects) # type: ignore
 
     approved_list = check_approved(subjects,marks)
 
     clean_terminal()
     
-    if len(approved_list) == 1:
+    if len(approved_list) == 1: # type: ignore
         print(f'Solo has aprobado {approved_list}')
     else:
         print(f'Tus asignaturas aprobadas son: {approved_list}')

@@ -1,7 +1,7 @@
 
 numbers_tuple = (50, 75, 46, 22, 80, 65, 8)
 
-def higher_lower(numbers_tuple:tuple) -> int:
+def higher_lower(numbers_tuple:tuple) -> tuple[int,int]:
     """Get the highest and lowest number from the tuple.
 
     Args:

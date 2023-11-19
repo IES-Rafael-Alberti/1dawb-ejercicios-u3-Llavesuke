@@ -20,6 +20,7 @@ def ask_word():
             else:
                 flow_control = True
                 word = list(word.lower())
+
                 return word
         
         except ValueError:
@@ -35,7 +36,10 @@ def palindrome(word):
         True (bool): When the word is a palindrome.
         False (bool): When the word is not a palindrome.
     """
-    if word == word[::-1]:
+    reversed_word = list(word)
+    reversed_word.reverse()
+
+    if word == reversed_word:
         return True
     else:
         return False
