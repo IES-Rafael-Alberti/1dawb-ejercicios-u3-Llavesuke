@@ -2,6 +2,11 @@
 def ask_user():
     """Ask the user for a serie of integers followed by comma.
 
+    Returns:
+        Numeric_list (list[float]): A list with the numbers written by the user.
+    
+    Exceptions:
+        ValueError: If something of the values introduced by the user is not a number.
     """
     bool =False
     
@@ -15,10 +20,7 @@ def ask_user():
             str_list = sample.split(',')
 
             for i in range(len(str_list)):
-                int(str_list[i])
-
-            for i in range(len(str_list)):
-                str_list[i] = int(str_list[i]) # type: ignore
+                str_list[i] = float(str_list[i]) # type: ignore
 
             numeric_list = str_list
             
@@ -35,7 +37,7 @@ def calculate_average(numeric_list):
 
     average = result / values
 
-    return average
+    return round(average,2)
 
 def calculate_typical_deviation(numeric_list:list) -> int:
     """Calculate the typical deviation of a list with integers
@@ -56,14 +58,14 @@ def calculate_typical_deviation(numeric_list:list) -> int:
         
     typical_deviation = (arithmetic_sum / values) ** 0.5
 
-    return typical_deviation
+    return round(typical_deviation,2)
     
 def main():
     numeric_list = ask_user()
 
-    average = round(calculate_average(numeric_list),2)
+    average = calculate_average(numeric_list)
 
-    typical_deviation = round(calculate_typical_deviation(numeric_list),2) # type: ignore
+    typical_deviation = calculate_typical_deviation(numeric_list) # type: ignore
 
     print('Desviación típica: ', end= '')
     print(typical_deviation)
